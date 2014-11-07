@@ -1,0 +1,44 @@
+autoload colors
+colors
+
+
+PROMPT='%B%(?, %F{green}, %F{red})$ %f%b'
+RPROMPT='[%F{magenta}%~%f]'
+
+alias sl=ls
+alias cls=clear
+alias as=asd
+
+alias b=cd\ ..
+
+# ls all
+alias lsa="ls -a"
+
+
+
+#------------------------------------
+# Home
+alias home="
+clear;
+cd ~;
+ls
+"
+
+# Dev
+alias dev="
+clear;
+cd ~/Dev;
+ls
+"
+
+# Downloads
+alias dwn="
+clear;
+cd ~/Downloads;
+ls
+"
+
+
+
+source ~/.profile
+
