@@ -12,15 +12,16 @@ git clone https://github.com/193s/myenv
 
 #### vim
 ```
-cd vim
-# rm ~/.vimrc
-make
+./setup vim
 ```
 
 #### zsh
 ```
-cd zsh
-# rm ~/.zshrc
-make
-``
+./setup zsh
+```
+
+
+#### Screenshot
+![screenshot01](imgs/screenshot01.png)
+
 

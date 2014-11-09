@@ -1,44 +1,60 @@
+# zshrc
+
+############################
+
+
 autoload colors
 colors
 
+autoload compinit
+compinit
 
-PROMPT='%B%(?, %F{green}, %F{red})$ %f%b'
+#############################
+
+# Prompt
+PROMPT='
+%B%(?, %F{green}, %F{red})$ %f%b'
+
 RPROMPT='[%F{magenta}%~%f]'
 
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
+
+##############################
+
+# avoid beep sound
+setopt no_beep
+# comment [#]
+setopt interactive_comments
+# extended glob
+setopt extended_glob
+
+# Shortcut
 alias sl=ls
 alias cls=clear
-alias as=asd
+alias b="cd .."
+alias la="ls -a" # ls all
 
-alias b=cd\ ..
-
-# ls all
-alias lsa="ls -a"
-
+# vi keybind
+bindkey -v
 
 
-#------------------------------------
-# Home
-alias home="
-clear;
-cd ~;
-ls
-"
+case ${OSTYPE} in
+    # OSX
+    darwin*)
+        export CLICOLOR=1
+        alias ls='ls -F'
 
-# Dev
-alias dev="
-clear;
-cd ~/Dev;
-ls
-"
-
-# Downloads
-alias dwn="
-clear;
-cd ~/Downloads;
-ls
-"
-
-
+        # Quick Look
+        alias q="qlmanage -p "$@" >& /dev/null"
+        ;;
+    # GNU/Linux
+    linux*)
+        ;;
+esac
 
 source ~/.profile
 
