@@ -37,6 +37,7 @@ alias sl=ls
 alias cls=clear
 alias b="cd .."
 alias la="ls -a" # ls all
+alias emacs="vim"
 
 # vi keybind
 bindkey -v
