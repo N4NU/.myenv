@@ -3,6 +3,8 @@
 set title
 syntax on
 imap <c-]> <esc>
+nmap <c-e> :NERDTreeToggle<CR>
+nmap <c-f> :TagbarToggle<CR>
 
 "-----------------
 " Indent
@@ -24,7 +26,7 @@ set expandtab
 "-------
 set clipboard=unnamed
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 " Color
 hi EasyMotionTarget ctermbg=none ctermfg=red
@@ -35,31 +37,18 @@ if has("gui_running")
     colorscheme desert
 endif
 
-" 改行コードの自動認識
-set fileformats=unix,dos,mac
+set fileformats=unix,mac
 
-"◯とかの文字でカーソルがずれないように
 set ambiwidth=double
 
 "----------------------
-" ステータスライン関連
-"----------------------
 
 set laststatus=2
-"set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).(&bomb?':BOM':'').']['.&ff.']'}%=\ (%v,%l)/%L%8P\
 
-set display+=lastline "画面最後の行を出来る限り表示する
+set display+=lastline
 
-"行番号を表示
 set number
-"カーソルの位置を表示
 set ruler
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ 'component': {
-"      \   'readonly': '%{&readonly?"⭤":""}',
-"      \ }
-"      \ }
 
 
 "--------------------------------------------------------------------------
@@ -81,11 +70,16 @@ if neobundle#exists_not_installed_bundles()
         \ string(neobundle#get_not_installed_bundle_names())
     echomsg 'Please execute ":NeoBundleInstall" command.'
     "finish
- endif
+endif
 
 " Plugins
 NeoBundle 'vim-fugitive'
 NeoBundle 'lightline.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'majutsushi/tagbar'
+
+
 
 " syntastic
 execute pathogen#infect()

@@ -12,10 +12,11 @@ compinit
 #############################
 
 # Prompt
-PROMPT='
-%B%(?, %F{green}, %F{red})$ %f%b'
+PROMPT="
+%B%(?, %F{green}, %F{red})$ %f%b"
 
-RPROMPT='[%F{magenta}%~%f]'
+RPROMPT="[%F{magenta}%~%f]"
+
 
 
 HISTFILE=~/.zsh_history
@@ -32,12 +33,12 @@ setopt interactive_comments
 # extended glob
 setopt extended_glob
 
-# Shortcut
+# Shortcuts
 alias sl=ls
 alias cls=clear
 alias b="cd .."
 alias la="ls -a" # ls all
-alias emacs="vim"
+alias emacs=vim
 
 # vi keybind
 bindkey -v
@@ -48,9 +49,6 @@ case ${OSTYPE} in
     darwin*)
         export CLICOLOR=1
         alias ls='ls -F'
-
-        # Quick Look
-        alias q="qlmanage -p "$@" >& /dev/null"
         ;;
     # GNU/Linux
     linux*)
@@ -58,4 +56,5 @@ case ${OSTYPE} in
 esac
 
 source ~/.profile
+source ~/.myenv/profile
 
