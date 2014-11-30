@@ -56,5 +56,5 @@ case ${OSTYPE} in
 esac
 
 source ~/.profile
-source ~/.myenv/profile
+source ~/.myenv/.profile
 
