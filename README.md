@@ -6,22 +6,18 @@ myenv
 
 ## Usage
 
-```
-git clone https://github.com/193s/myenv
+```sh
+$ git clone https://github.com/193s/myenv
 ```
 
 #### vim
-```
-./setup vim
+```sh
+$ ./setup vim
 ```
 
 #### zsh
-```
+```sh
 ./setup zsh
 ```
-
-
-#### Screenshot
-![screenshot01](imgs/screenshot01.png)
 
 
