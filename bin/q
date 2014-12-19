@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 if test -r $1
 then qlmanage -p "$1" >& /dev/null

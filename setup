@@ -2,31 +2,13 @@
 
 case $1 in
     'vim')
-        if test -f ~/.vimrc
-        then
-            echo 'Are you sure you want to overwrite the existing file? [Y/n]'
-            read ANSWER
-            case $ANSWER in
-                'Y' ) cp vim/vimrc ~/.vimrc
-                    ;;
-            esac
-        else
-            cp vim/vimrc ~/.vimrc
-        fi
+        cp -i vim/vimrc ~/.vimrc
         ;;
 
     'zsh')
-        if test -f ~/.zshrc
-        then
-            echo 'Are you sure you want to overwrite the existing file? [Y/n]?'
-            read ANSWER
-            case $ANSWER in
-                'Y' ) cp zsh/zshrc ~/.zshrc
-                    ;;
-            esac
-        else
-            cp zsh/zshrc ~/.zshrc
-        fi
+        cp -i zsh/.zshrc ~
+        cp -i zsh/.zshrc.osx ~
+        cp -i zsh/.zshrc.linux ~
         ;;
 
     *)
