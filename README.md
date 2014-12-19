@@ -7,7 +7,7 @@ myenv
 ## Usage
 
 ```sh
-$ git clone https://github.com/193s/myenv
+$ git clone https://github.com/193s/.myenv ~/.myenv
 ```
 
 #### vim
@@ -17,7 +17,7 @@ $ ./setup vim
 
 #### zsh
 ```sh
-./setup zsh
+$ ./setup zsh
 ```
 
 

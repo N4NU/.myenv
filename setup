@@ -2,7 +2,7 @@
 
 case $1 in
     'vim')
-        cp -i vim/vimrc ~/.vimrc
+        cp -i vim/.vimrc ~
         ;;
 
     'zsh')
