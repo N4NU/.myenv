@@ -3,6 +3,7 @@
 case $1 in
     'vim')
         cp -i vim/.vimrc ~
+        cp -i vim/.vimrc.bundle ~
         ;;
 
     'zsh')
