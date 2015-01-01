@@ -4,20 +4,16 @@ myenv
 .zshrc, .vimrc, ...
 
 
-## Usage
+## Install
 
 ```sh
 $ git clone https://github.com/193s/.myenv ~/.myenv
+$ git submodule init
+$ git submodule update
 ```
 
-#### vim
+## Setup
 ```sh
-$ ./setup vim
+$ ./setup (vim|zsh)
 ```
-
-#### zsh
-```sh
-$ ./setup zsh
-```
-
 
