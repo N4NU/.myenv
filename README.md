@@ -17,3 +17,11 @@ $ git submodule update
 $ ./setup (vim|zsh)
 ```
 
+## Dependencies
+[Vim 7.0](http://www.vim.org/)  
+[vim-pathogen](https://github.com/tpope/vim-pathogen)  
+[NeoBundle](https://github.com/Shougo/neobundle.vim)  
+  
+[Zsh 5.0](http://www.zsh.org/)  
+
+
