@@ -13,7 +13,7 @@ confirm() {
 
 cp -i $DIR/.vimrc ~
 cp -i $DIR/.vimrc.profile ~
-cp -ir $DIR/.vim/ ~
+cp -ri $DIR/.vim/ ~
 
 confirm 'install NeoBundle? [y/N]' \
  && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh

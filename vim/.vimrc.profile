@@ -1,5 +1,14 @@
 "-----------------------------------------------------------
+" pathogen
+"
+
+" syntastic
+execute pathogen#infect()
+
+
+"-----------------------------------------------------------
 " Vundle
+"
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -18,16 +27,16 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
+Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
- " Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
+Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,30 +53,48 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-Plugin 'fatih/vim-go'
-
 "--------------------------------------------------------------------------
 " neobundle
-set nocompatible               " Be iMproved
-filetype off                   " Required!
+"
 
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-    endif
+" Note: Skip initialization for vim-tiny or vim-small.
+ if !1 | finish | endif
 
-    call neobundle#rc(expand('~/.vim/bundle/'))
+ if has('vim_starting')
+   if &compatible
+     set nocompatible               " Be iMproved
+   endif
 
-    filetype plugin indent on     " Required!
+   " Required:
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+ endif
 
-" Installation check.
-if neobundle#exists_not_installed_bundles()
-    echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
-    echomsg 'Please execute ":NeoBundleInstall" command.'
-    "finish
-endif
+ " Required:
+ call neobundle#begin(expand('~/.vim/bundle/'))
 
+ " Let NeoBundle manage NeoBundle
+ " Required:
+ NeoBundleFetch 'Shougo/neobundle.vim'
+
+ " My Bundles here:
+ " Refer to |:NeoBundle-examples|.
+ " Note: You don't set neobundle setting in .gvimrc!
+
+ call neobundle#end()
+
+ " Required:
+ filetype plugin indent on
+
+ " If there are uninstalled bundles found on startup,
+ " this will conveniently prompt you to install them.
+ NeoBundleCheck
+
+" --------------------------------------------------------
 " Plugins
+"
+
+Plugin 'fatih/vim-go'
+
 NeoBundle 'vim-fugitive'
 NeoBundle 'lightline.vim'
 NeoBundle 'derekwyatt/vim-scala'
@@ -75,7 +102,3 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'majutsushi/tagbar'
 
 
-
-
-" syntastic
-execute pathogen#infect()

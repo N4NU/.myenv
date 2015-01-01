@@ -50,5 +50,5 @@ set display+=lastline
 set number
 set ruler
 
-" source ~/.vimrc.profile
+source ~/.vimrc.profile
 
