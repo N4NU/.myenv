@@ -13,8 +13,8 @@ RPROMPT='|'
 # History ####################
 
 HISTFILE=~/.zsh.history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 setopt extended_history
 setopt hist_ignore_all_dups
@@ -42,13 +42,6 @@ autoload compinit
 compinit
 
 # Shortcuts ##################
-alias sl=ls
-alias cls=clear
-alias b='cd ..'
-alias la='ls -a'
-alias :q=exit
-alias emacs=vim
-
 
 case $OSTYPE in
   # OSX
@@ -57,8 +50,19 @@ case $OSTYPE in
   linux*) source ~/.zshrc.linux;;
 esac
 
+
+cd () {
+  builtin cd "$@" && ls
+}
+alias sl=ls
+# alias cls=clear
+alias b='cd ..'
+alias la='ls -a'
+alias :q=exit
+alias emacs=vim
+
+
 # Includes ###################
 
 source ~/.zshrc.profile
-source ~/.myenv/.profile
 

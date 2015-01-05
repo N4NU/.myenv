@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if test -r $1
-then qlmanage -p "$1" >& /dev/null
-    exit 0
-else echo 'No such file or directory'
-    exit 1
-fi
