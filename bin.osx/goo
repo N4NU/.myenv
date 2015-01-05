@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if test $# -eq 0
+then exit 0
+else open "https://www.google.com/search?q=$*"
+fi
