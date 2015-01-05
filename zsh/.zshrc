@@ -6,7 +6,7 @@ bindkey -v
 # Prompt #####################
 
 # PROMPT='%B%(?, %F{green}, %F{red})$ %f%b'
-PROMPT='%F{red}%n@%m%f:%F{blue}%~%f%B%(?, %F{green}, %F{red})$ %f%b'
+PROMPT='%F{red}%n@%m%f:%F{blue}%~%f%B%(?,%F{green},%F{red})$ %f%b'
 RPROMPT='|'
 # RPROMPT='[%F{magenta}%~%f]'
 
