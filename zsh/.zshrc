@@ -58,11 +58,9 @@ alias sl=ls
 # alias cls=clear
 alias b='cd ..'
 alias la='ls -a'
-alias :q=exit
 alias emacs=vim
 
 
 # Includes ###################
 
 source ~/.zshrc.profile
-

@@ -1,5 +1,6 @@
 "-----------------------------------------------------------
 
+set encoding=utf_8
 set title
 syntax on
 imap <c-]> <esc>

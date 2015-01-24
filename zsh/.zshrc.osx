@@ -5,4 +5,6 @@ copy () { pbcopy <$1 }
 export CLICOLOR=1
 alias ls='gls -F --color'
 
+alias factor=gfactor
+
 export PATH=$PATH:$HOME/.myenv/bin.osx
