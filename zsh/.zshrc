@@ -7,7 +7,8 @@ bindkey -v
 
 # PROMPT='%B%(?, %F{green}, %F{red})$ %f%b'
 PROMPT='%F{red}%n@%m%f:%F{blue}%~%f%B%(?,%F{green},%F{red})$ %f%b'
-RPROMPT='|'
+RPROMPT='%K{red} %k'
+# RPROMPT='|'
 # RPROMPT='[%F{magenta}%~%f]'
 
 # History ####################
@@ -25,7 +26,7 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey '^P' history-beginning-search-backward-end
 bindkey '^N' history-beginning-search-forward-end
-bindkey "^R" history-incremental-search-backward
+bindkey '^R' history-incremental-search-backward
 
 # Optional ###################
 
@@ -58,6 +59,7 @@ alias sl=ls
 # alias cls=clear
 alias b='cd ..'
 alias la='ls -a'
+alias t=touch
 alias emacs=vim
 
 

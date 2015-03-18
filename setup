@@ -3,9 +3,10 @@
 readonly CWD=`dirname $0`
 
 case $1 in
-    'vim') sh $CWD/vim/setup.sh ;;
-    'zsh') sh $CWD/zsh/setup.sh ;;
-    *) echo 'Usage: ./setup (zsh|vim)' ;;
+    'vim')  sh $CWD/vim/setup.sh ;;
+    'zsh')  sh $CWD/zsh/setup.sh ;;
+    'tmux') cp -i $CWD/.tmux.conf $HOME ;;
+    *) echo 'Usage: ./setup (zsh|vim|tmux)' ;;
 esac
 
 
