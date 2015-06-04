@@ -66,6 +66,14 @@ filetype plugin indent on    " required
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
+NeoBundle 'sudo.vim'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'itchyny/calendar.vim'
+NeoBundle 'Kuniwak/vim-qrcode'
+
  call neobundle#end()
 
  " Required:
@@ -80,15 +88,6 @@ filetype plugin indent on    " required
 "
 
 Plugin 'fatih/vim-go'
-
-NeoBundle 'sudo.vim'
-NeoBundle 'vim-fugitive'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'itchyny/calendar.vim'
-
 
 Plugin 'kchmck/vim-coffee-script'
 
