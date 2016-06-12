@@ -1,15 +1,19 @@
 # .zshrc
 
 # Key Bindings ###############
-bindkey -v
+bindkey -e
+bindkey '^[\e[C' forward-word
+bindkey '^[\e[D' backward-word
 
 # Prompt #####################
 
 # PROMPT='%B%(?, %F{green}, %F{red})$ %f%b'
-PROMPT='%F{red}%n@%m%f:%F{blue}%~%f%B%(?,%F{green},%F{red})$ %f%b'
+# PROMPT='%F{red}%n@%m%f:%F{blue}%~%f%B%(?,%F{green},%F{red})$ %f%b'
 # RPROMPT='%K{red} %k'
 # RPROMPT='|'
 # RPROMPT='[%F{magenta}%~%f]'
+PROMPT='[%n@%m]# '
+RPROMPT='[%d]'
 
 # History ####################
 
@@ -58,9 +62,11 @@ cd () {
 alias sl=ls
 # alias cls=clear
 alias b='cd ..'
+alias l='ls'
 alias la='ls -a'
 alias t=touch
 alias emacs=vim
+alias gdb='gdb -q'
 
 
 # Includes ###################
