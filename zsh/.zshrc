@@ -12,7 +12,7 @@ bindkey '^[\e[D' backward-word
 # RPROMPT='%K{red} %k'
 # RPROMPT='|'
 # RPROMPT='[%F{magenta}%~%f]'
-PROMPT='[%n@%m]# '
+PROMPT='[%n@%m]%# '
 RPROMPT='[%d]'
 
 # History ####################
