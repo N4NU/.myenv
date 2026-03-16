@@ -20,6 +20,7 @@ $ ./setup (vim|zsh)
 ```
 
 ## Maintenance audit (2026-03)
+- clone URL は現行のリポジトリ所有者 `N4NU` に合わせて更新しました。
 - tmux の `mode-mouse` は現行版で廃止されていたため、`mouse on` に更新しました。
 - Vundle の旧リポジトリ `gmarik/Vundle.vim` は現在の `VundleVim/Vundle.vim` に更新しました。
 - Vim プラグイン管理は `pathogen` / `NeoBundle` / `Vundle` の併用で、特に NeoBundle は長期間メンテされていないレガシー構成です。
@@ -31,4 +32,3 @@ $ ./setup (vim|zsh)
 [Vundle](https://github.com/VundleVim/Vundle.vim) - legacy  
 [Vim](https://www.vim.org/)  
 [Zsh](https://www.zsh.org/)  
-
