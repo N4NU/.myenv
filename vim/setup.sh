@@ -19,8 +19,7 @@ confirm 'install NeoBundle? [y/N]' \
  && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 confirm 'install Vundle? [y/N]' \
- && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
+ && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
 
