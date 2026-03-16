@@ -19,16 +19,6 @@ $ git submodule update
 $ ./setup (vim|zsh)
 ```
 
-## Maintenance audit (2026-03)
-- clone URL は現行のリポジトリ所有者 `N4NU` に合わせて更新しました。
-- tmux の `mode-mouse` は現行版で廃止されていたため、`mouse on` に更新しました。
-- Vundle の旧リポジトリ `gmarik/Vundle.vim` は現在の `VundleVim/Vundle.vim` に更新しました。
-- Vim プラグイン管理は `pathogen` / `NeoBundle` / `Vundle` の併用で、特に NeoBundle は長期間メンテされていないレガシー構成です。
-- `vim-scala` や `vim-coffee-script` など、現在は利用頻度が低い可能性のあるプラグインが残っています。
+## Maintenance audit
 
-## Legacy dependencies
-[vim-pathogen](https://github.com/tpope/vim-pathogen)  
-[NeoBundle](https://github.com/Shougo/neobundle.vim) - legacy / unmaintained  
-[Vundle](https://github.com/VundleVim/Vundle.vim) - legacy  
-[Vim](https://www.vim.org/)  
-[Zsh](https://www.zsh.org/)  
+See [/MAINTENANCE_AUDIT.md](/MAINTENANCE_AUDIT.md).
